@@ -1,0 +1,41 @@
+.error {
+    color: red;
+}
+
+p {
+    font-size: 16px;
+}
+
+.type,
+.tags {
+    font-size: 16px;
+}
+
+.content-image {
+    width: 100%;
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
+}
+:host {
+    width: 80%;
+    display: block;
+    margin: 20px auto;
+    border: 2px ridge orange;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #3c9f60;
+}
+
+:host.is-last {
+    border: 2px solid black;
+}
+
+
+
+
+
+
+
