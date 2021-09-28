@@ -10,12 +10,19 @@ export class ContentListComponent implements OnInit {
   contentList: Content[]=[
     {
       id: 1,
-      author: "Yash",
-      title: "My second Angular Assigment",
-      body: "This is my second assingment of Angular",
-      imgUrl: "https://ykumar.scweb.ca/images/profile-1.jpeg",
-      tags: ['Windsor', ' Mobile Application Student', ' St. Clair'],
-      type: 'My info'
+      author: "Brad Bennett",
+      title: "Google wants you to turn your iPhone 13 into a Google phone",
+      body: "Google has published a new blog post focused on turning your iPhone 13 series device into a Google-powered smartphone.\n" +
+          "\n" +
+          "If I were Apple CEO Tim Cook right now, I’d be firing interns or breaking weird Apple Pizza trays in the cafeteria over the blatant disrespect.\n" +
+          "\n" +
+          "The post comes from Google’s head of iOS, Luke Wroblewski, who by all accounts seems like a massive fan of Apple’s products based on his Twitter account, but somehow works for Google CEO Sundar Pichai’s house of AdSense.\n" +
+          "\n" +
+          "Right off the top, the article explains how Google offers several iOS widgets that show off Google Photos highlights, Google Fit updates, what’s playing on YouTube Music or a quick search on Google Maps. The real slap in the face, though, is that in this screenshot, Google placed Gmail and Google News on the homepage and used a default Apple wallpaper.\n" +
+          "\n",
+      imgUrl: "https://cdn.mobilesyrup.com/wp-content/uploads/2021/09/google-iphone-scaled.jpg",
+      tags: ['Google', ' iPhone', ' Chrome'],
+      type: 'News'
     },
     {
       id: 2,
