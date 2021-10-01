@@ -7,6 +7,12 @@ import { Content } from '../helper-files/content-interface';
   styleUrls: ['./content-list.component.css']
 })
 export class ContentListComponent implements OnInit {
+
+  searchContentCard(search:String):void{
+    let found = this.contentList.find(content => content.title.toLowerCase() == search.toLowerCase());
+    console.log(found ? `${search} exist in the list!` : `${search} does not exist in the list!`);
+  }
+
   contentList: Content[]=[
     {
       id: 1,
@@ -56,7 +62,7 @@ export class ContentListComponent implements OnInit {
           '-Child cards will emit a three-toned chime and a flashing yellow light.',
       imgUrl: 'https://6ix.buzz/wp-content/uploads/2021/09/collage-2-2-780x470.jpg',
       tags: ['Toronto', ' Presto', ' TTC'],
-      type: 'News'
+      type: 'Cars'
     },
     {
       id: 4,
@@ -86,6 +92,5 @@ export class ContentListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // this.contentList =
   }
 }
