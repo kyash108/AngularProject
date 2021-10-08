@@ -83,7 +83,6 @@ export class ContentListComponent implements OnInit {
           'The Peterborough Victoria Northumberland and Clarington Catholic District School Board confirms that at least 11 cases have been tied to Monsignor Leo Cleary Catholic Elementary School since an outbreak was declared at the facility on Sept. 19.\n' +
           '\n' +
           '“Due to the ongoing level of COVID-19 activity within the school and the number of staff and students who have been dismissed, the Peterborough Victoria Northumberland and Clarington Catholic District School Board has made the decision in collaboration with DRHD (the Durham Region Health Department) to close the school to in-person learning effective immediately,” the board said in a letter sent to parents.',
-      imgUrl: 'https://www.cp24.com/polopoly_fs/1.5601643.1632744495!/httpImage/image.png_gen/derivatives/landscape_225/image.png',
       tags: ['School', ' Elementary', ' Covid'],
       type: 'News'
     },

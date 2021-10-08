@@ -1,15 +1,17 @@
 <article class="content-{{ content.id }}">
     <section>
-        <div *ngIf="content.imgUrl">
-            <img src="{{ content.imgUrl }}" (click)="onImageClick(content.id)" class="content-image" />
-        </div>
+            <img *ngIf="content.imgUrl; else NoImageFound" src="{{ content.imgUrl }}" (click)="onImageClick(content.id)" class="content-image" />
+            <ng-template #NoImageFound>
+                <img src="https://s3-wp-product.s3.amazonaws.com/wp-content/uploads/2018/03/21182625/MaxPixel.freegreatpicture.com-File-Not-Found-Not-Found-404-Error-2384304.jpg" (click)="onImageClick(content.id)" class="content-image" />
+            </ng-template>
     </section>
-    <h1 class="title">{{ content.title }}</h1>
+    <h1 appHoverStyle [borderColor]="'#b8bac7'" class="title">{{ content.title }}</h1>
+
     <section>
         <p class="body" *ngIf="content.body">{{ content.body }}</p>
-
     </section>
+
     <p class="type" *ngIf="content.type"><strong>Type:</strong> {{ content.type }}</p>
-    <p class="tags" *ngIf="content.tags"><strong>Tags:</strong> {{ content.tags }}</p>
+    <p class="tags" *ngIf="content.tags"><strong>Tags:</strong> <span *ngFor="let tag of content.tags;" appHoverStyle [fontWeight]='"bold"'>{{ tag }} </span></p>
     <p class="author"><strong>Author:</strong> {{ content.author }}</p>
 </article>
