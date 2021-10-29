@@ -13,6 +13,13 @@ export class ContentListComponent implements OnInit {
     console.log(found ? `${search} exist in the list!` : `${search} does not exist in the list!`);
   }
 
+    addContent(createContentFromChild: Content): void {
+        this.contentList.push(createContentFromChild);
+        console.log("Added " + this.contentList.length);
+        console.log("Added " + createContentFromChild.title+" Successfully");
+        this.contentList = Object.assign([], this.contentList);
+    }
+
   contentList: Content[]=[
     {
       id: 1,

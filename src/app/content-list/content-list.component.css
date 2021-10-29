@@ -5,6 +5,15 @@
 .action {
     border-color: orange;
 }
+button:hover {
+    cursor: pointer;
+}
+div.search {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
 .search input {
     width: 80%;
     padding: 10px;
