@@ -1,0 +1,14 @@
+:host {
+    width: 80%;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
+.message {
+    width: 15%;
+    padding: 10px;
+    margin: 10px;
+    background-color: #3c9f60;
+    border: 1px solid orange;
+    border-radius: 0.25rem;
+}
