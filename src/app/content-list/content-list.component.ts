@@ -10,6 +10,24 @@ import { ContentService } from '../services/content.service';
 export class ContentListComponent implements OnInit {
   contentList!: Content[];
 
+  addContentToList(newContentFromChild: Content): void {
+    this.contentList.push(newContentFromChild);
+    // We need to clone the array for the pipe to work
+    this.contentList = Object.assign([], this.contentList);
+  }
+
+  updateContentInList(response: string) {
+    console.log(response);
+    this.getContentList();
+  }
+
+  getContentList() {
+    this.contentService.getContentsObs().subscribe((content) => {
+      this.contentList = content;
+    });
+  }
+
+
   searchContentCard(search: String): void {
     let found = this.contentList.find(content => content.title.toLowerCase() == search.toLowerCase());
     console.log(found ? `${search} exist in the list!` : `${search} does not exist in the list!`);
@@ -18,9 +36,11 @@ export class ContentListComponent implements OnInit {
   constructor(private contentService: ContentService) {}
 
   ngOnInit(): void {
-    this.contentService.getContentsObs().subscribe((content) => {
-      this.contentList = content;
-    });
+    // this.contentService.getContentsObs().subscribe((content) => {
+    //   this.contentList = content;
+    // });
+    this.getContentList();
+
   }
 }
 
