@@ -25,6 +25,12 @@ p {
     text-align: center;
 }
 :host {
+    /*display: inline-block;*/
+    /*width: 300px;*/
+    /*background-color: aliceblue;*/
+    /*padding: 26px;*/
+    /*float: left;*/
+
     width: 80%;
     display: block;
     margin: 20px auto;
@@ -38,7 +44,9 @@ p {
     border: 2px solid black;
 }
 
-
+h1, section {
+    text-align: center;
+}
 
 
 

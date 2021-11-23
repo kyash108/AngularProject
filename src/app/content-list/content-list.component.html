@@ -1,19 +1,16 @@
-<!--<app-content-card *ngFor="let content of contentList; index as i; last as isLast" [content]="content"-->
-<!--                  class="content-list-{{i}}" [class.is-last]="isLast">-->
-<!--    {{ content }}-->
-<!--</app-content-card>-->
-<app-create-content (newContentEvent)="addContentToList($event)"
-                    (updateContentEvent)="updateContentInList($event)"></app-create-content>
-
 <div class="search">
     <input #search placeholder="Search Title">
     <button (click)="searchContentCard(search.value)">Search</button>
+    <app-create-content (newContentEvent)="addContentToList($event)"
+                        (updateContentEvent)="updateContentInList($event)"></app-create-content>
+
 </div>
 
 <app-content-card *ngFor="let content of (contentList | filterPipe:'News'); " [content]="content"
                   class="content-card {{content.type}}" >
     {{ content }}
 </app-content-card>
+
 <app-content-card *ngFor="let content of (contentList | filterPipe:'Cars'); " [content]="content"
                   class="content-card {{content.type}}" >
     {{ content }}

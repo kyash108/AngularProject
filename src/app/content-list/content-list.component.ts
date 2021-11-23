@@ -36,9 +36,6 @@ export class ContentListComponent implements OnInit {
   constructor(private contentService: ContentService) {}
 
   ngOnInit(): void {
-    // this.contentService.getContentsObs().subscribe((content) => {
-    //   this.contentList = content;
-    // });
     this.getContentList();
 
   }
