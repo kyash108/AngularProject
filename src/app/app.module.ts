@@ -18,6 +18,9 @@ import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatDialogModule} from "@angular/material/dialog";
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -28,22 +31,29 @@ import {MatDialogModule} from "@angular/material/dialog";
     HoverStyleDirective,
     MessagesComponent,
     CreateContentComponent,
-    AddContentComponent
+    AddContentComponent,
+    ContentDetailComponent,
+    NotFoundComponent
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
-      dataEncapsulation: false,
-      delay: 1000,
-    }),
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatInputModule,
-    MatDialogModule,
-    MatDividerModule,
-    FormsModule,
-  ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+            dataEncapsulation: false,
+            delay: 1000,
+        }),
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatInputModule,
+        MatDialogModule,
+        MatDividerModule,
+        FormsModule,
+        RouterModule.forRoot([
+            { path: 'content/:id', component: ContentDetailComponent },
+            { path: 'content', component: ContentListComponent },
+            { path: '**', component: NotFoundComponent }
+        ])
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

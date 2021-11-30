@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Content} from "../helper-files/content-interface";
-// import {ContentList} from "../helper-files/content-list";
 
 @Component({
   selector: 'app-content-card',
@@ -8,15 +7,15 @@ import {Content} from "../helper-files/content-interface";
   styleUrls: ['./content-card.component.css']
 })
 export class ContentCardComponent implements OnInit {
-  @Input() content: any;
+  @Input() content!: Content;
 
   constructor() {
 
   }
 
-  onImageClick(id: number) {
-    console.log(`Image with id: ${id} is clicked`);
-  }
+  // onImageClick(id: number) {
+  //   console.log(`Image with id: ${id} is clicked`);
+  // }
   ngOnInit(): void {}
 
 }
