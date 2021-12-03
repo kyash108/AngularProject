@@ -103,7 +103,7 @@ export class CreateContentComponent implements OnInit {
         this.newContent.title &&
         this.newContent.author
     ) {
-      this.snackBar.open('News has been added!');
+      this.snackBar.open('New article has been added!');
       this.error = undefined;
       this.contentService
           .addNewContent(this.newContent)
