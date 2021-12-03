@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ContentService } from './services/content.service';
+import { LogUpdateService } from './services/log-update.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularAssignment1';
+  constructor(private logService: LogUpdateService) {}
 }
